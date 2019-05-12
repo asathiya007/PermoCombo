@@ -34,7 +34,8 @@ function combination(n, r) {
 }
 
 // define the input validation message
-const inputValMsg = 'Invalid input. Please enter two positive integers!';
+const posIntMsg = 'Invalid input. Please enter two positive integers!';
+const nAndRMsg = 'Invalid input. \'n\' value cannot be less than \'r\' value';
 
 // add functionality to the permutation button
 findPerm.addEventListener('click', (e) => {
@@ -43,11 +44,19 @@ findPerm.addEventListener('click', (e) => {
 
     // display result, or request valid input
     try {
-        result.innerHTML = `Permutation : P(${nInput.value}, ` +
-            `${rInput.value}) = ` + permutation(parseInt(nInput.value),
-            parseInt(rInput.value));
+        // extract the n and r values
+        n = parseInt(nInput.value);
+        r = parseInt(rInput.value);
+
+        // validate order property of input, request valid input if needed
+        if (n < r) {
+            alert(nAndRMsg);
+        } else {
+            result.innerHTML = `Combination : C(${n}, `
+                + `${r}) = ` + combination(n, r);
+        }
     } catch (err) {
-        alert(inputValMsg);
+        alert(posIntMsg);
     }
 });
 
@@ -58,10 +67,18 @@ findComb.addEventListener('click', (e) => {
 
     // display result, or request valid input
     try {
-        result.innerHTML = `Combination : C(${nInput.value}, `
-            + `${rInput.value}) = ` + combination(parseInt(nInput.value),
-            parseInt(rInput.value));
+        // extract the n and r values
+        n = parseInt(nInput.value);
+        r = parseInt(rInput.value);
+
+        // validate order property of input, request valid input if needed
+        if (n < r) {
+            alert(nAndRMsg);
+        } else {
+            result.innerHTML = `Combination : C(${n}, `
+                + `${r}) = ` + combination(n, r);
+        }
     } catch (err) {
-        alert(inputValMsg);
+        alert(posIntMsg);
     }
 });

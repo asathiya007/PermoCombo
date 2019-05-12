@@ -52,8 +52,8 @@ findPerm.addEventListener('click', (e) => {
         if (n < r) {
             alert(nAndRMsg);
         } else {
-            result.innerHTML = `Combination : C(${n}, `
-                + `${r}) = ` + combination(n, r);
+            result.innerHTML = `Permutation : P(${n}, ${r}) = `
+                + permutation(n, r);
         }
     } catch (err) {
         alert(posIntMsg);
@@ -75,8 +75,8 @@ findComb.addEventListener('click', (e) => {
         if (n < r) {
             alert(nAndRMsg);
         } else {
-            result.innerHTML = `Combination : C(${n}, `
-                + `${r}) = ` + combination(n, r);
+            result.innerHTML = `Combination : C(${n}, ${r}) = `
+                + combination(n, r);
         }
     } catch (err) {
         alert(posIntMsg);

@@ -1,0 +1,56 @@
+<!-- by AKSHAY SATHIYA, 05/11/2019 -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="permutation and combination calculator, uses DP approach">
+        <meta name="keywords" content="permutation, combination, calculator">
+        <link rel="stylesheet" href="css/style.css">
+        <title>PermoCombo</title>
+    </head>
+    <body>
+        <header>
+            <h1>PermoCombo</h1>
+        </header>
+
+        <div id="dsc-bar">
+            <h3>Calculate permutations and combinations at lightning speed with
+            this calculator (which uses dynamic programming to speed up calculations).</h3>
+        </div>
+
+        <div id="info-bar">
+            <h3>A permutation is a selection of r items from a set of n items where the
+            order in which the items are selected matters.</h3>
+            <h3>A combination is a selection of r items from a set of n items where the
+            order in which the items are selected does not matter.</h3>
+        </div>
+
+        <form id="find-PorM" class="container">
+            <label class="title">Enter Parameters</label>
+            <br>
+            <br>
+            <label for="n" id="n-label">Size of Set (n)</label>
+            <input id="n-input" type="text" name="n" placeholder="Enter an integer">
+            <br>
+            <label for="r" id="r-label">Choose Items (r)</label>
+            <input id="r-input" type="text" name="r" placeholder="Enter an integer">
+            <br>
+            <br>
+            <button id="find-permutation" type="submit">Permutation</button>
+            <button id="find-combination" type="submit">Combination</button>
+        </form>
+
+        <div id="display-result" class="container">
+            <label class="title">Result</label>
+            <br>
+            <p id="result">&nbsp;</p>
+        </div>
+
+        <script src="js/permocombo.js"></script>
+    </body>
+
+    <footer>
+        <p>Akshay Sathiya, Copyright &copy; 2019</p>
+    </footer>
+</html>
